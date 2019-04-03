@@ -4,7 +4,7 @@ Environment for developing GoogleAppScript on your computer.
 
 # Spec
 - [Docker Desktop](https://www.docker.com/products/docker-desktop): latest
-- [node](https://nodejs.org/en/): latest
+- [NodeJS](https://nodejs.org/en/): latest
 - [google/clasp](https://github.com/google/clasp): latest
 
 # How to use
