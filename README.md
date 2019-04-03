@@ -41,7 +41,7 @@ Authorization successful.
 Default credentials saved to: ~/.clasprc.json (/root/.clasprc.json).
 ```
 
-## fetch existing Google App Script
+## Development for existing Google App Script
 
 ```
 $ clasp list
