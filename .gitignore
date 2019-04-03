@@ -60,6 +60,7 @@ typings/
 # next.js build output
 .next
 
-# source code ignore
+# code and credential ignore
 app/*
+credentials/*
 !.gitkeep
