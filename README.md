@@ -1,6 +1,6 @@
 # gas-template
 
-Environment for developing GAS on your computer.
+Environment for developing GoogleAppScript on your computer.
 
 # Spec
 - [Docker Desktop](https://www.docker.com/products/docker-desktop): latest
@@ -49,7 +49,7 @@ hogehoge     – https://script.google.com/d/XXXXXX/edit
 hugahuga     – https://script.google.com/d/YYYYYY/edit
 ```
 
-Choose target project.
+Choose target project and checkout project.
 
 ```e.g. hogehoge
 $ mkdir hogehoge
@@ -57,8 +57,7 @@ $ cd hogehoge
 $ clasp clone https://script.google.com/d/XXXXXX/edit
 ```
 
-Editing code.
-deploy new version.
+Editing code. deploy new version.
 
 ```
 $ clasp deploy
