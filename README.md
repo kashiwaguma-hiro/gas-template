@@ -64,4 +64,4 @@ $ clasp deploy
 ```
 
 ## Other operation
-see offical document. https://github.com/google/clasp#undeploy
+see offical document. https://github.com/google/clasp
