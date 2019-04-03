@@ -52,8 +52,7 @@ hugahuga     – https://script.google.com/d/YYYYYY/edit
 Choose target project and checkout project.
 
 ```e.g. hogehoge
-$ mkdir hogehoge
-$ cd hogehoge
+$ cd /app
 $ clasp clone https://script.google.com/d/XXXXXX/edit
 ```
 
