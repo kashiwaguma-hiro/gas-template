@@ -24,7 +24,7 @@ $ docker exec -it gas-template_node_1 bash
 ## Authentication for your Google Account(only once)
 
 ```shell
-$ clasp login --no-localhost
+root@34cd6de71f2d:/app# clasp login --no-localhost
 Logging in globally...
 🔑 Authorize clasp by visiting this url:
 https://accounts.google.com/o/oauth2/v2/auth?access_type=offline&XXXXXXXXXXXXXXXXX ...
@@ -44,7 +44,7 @@ Default credentials saved to: ~/.clasprc.json (/root/.clasprc.json).
 ## Development for existing Google App Script
 
 ```
-$ clasp list
+root@34cd6de71f2d:/app# clasp list
 hogehoge     – https://script.google.com/d/XXXXXX/edit
 hugahuga     – https://script.google.com/d/YYYYYY/edit
 ```
@@ -52,14 +52,40 @@ hugahuga     – https://script.google.com/d/YYYYYY/edit
 Choose target project and checkout project.
 
 ```e.g. hogehoge
-$ cd /app
-$ clasp clone https://script.google.com/d/XXXXXX/edit
+root@34cd6de71f2d:/app# cd /app
+root@34cd6de71f2d:/app# clasp clone https://script.google.com/d/XXXXXX/edit
 ```
 
-Editing code. deploy new version.
+editing code. apply GoogleAppScript code.
+```
+root@34cd6de71f2d:/app# clasp push
+```
+
+or deploy new version.
 
 ```
-$ clasp deploy
+root@34cd6de71f2d:/app# clasp deploy --description <descripton ener here!>
+Created version 4.
+- AKfycbytqkQOGyXWTaXYrclwu6UUSOHXO8Zdzo2Gs3PY-NQqpoFEg8QjdTdT1AIc_cY9-axv @4.
+
+root@34cd6de71f2d:/app# clasp deployments
+4 Deployments.
+- AKfycbwWScAoTbQ6kyUUUPHcZyCEo5VfY8P9UwvbnYyBHXM @HEAD 
+- AKfycbx82ARY8F2eGLcg916xwM96di9tQ4hYYZNBP-X-0kErR9imvzmSUXNMvEmVX2O4s7Xp @2 
+- AKfycbzGs8UZpRTgy570CZL2IGnLmBI-2ewAMkoJr0W7MKsgxsPSYojzafMmwaVRJBmwukOd @3 
+- AKfycbytqkQOGyXWTaXYrclwu6UUSOHXO8Zdzo2Gs3PY-NQqpoFEg8QjdTdT1AIc_cY9-axv @4 
+```
+
+rollback deployment.
+```
+root@34cd6de71f2d:/app# clasp undeploy
+Undeployed AKfycbytqkQOGyXWTaXYrclwu6UUSOHXO8Zdzo2Gs3PY-NQqpoFEg8QjdTdT1AIc_cY9-axv.
+
+root@34cd6de71f2d:/app# clasp deployments
+3 Deployments.
+- AKfycbwWScAoTbQ6kyUUUPHcZyCEo5VfY8P9UwvbnYyBHXM @HEAD 
+- AKfycbx82ARY8F2eGLcg916xwM96di9tQ4hYYZNBP-X-0kErR9imvzmSUXNMvEmVX2O4s7Xp @2 
+- AKfycbzGs8UZpRTgy570CZL2IGnLmBI-2ewAMkoJr0W7MKsgxsPSYojzafMmwaVRJBmwukOd @3 
 ```
 
 ## Other operation
