@@ -1,14 +1,17 @@
-# gas-template
+# GAS Template
 
-Environment for developing GoogleAppScript on your computer.
+Environment for development GoogleAppScript on your machine.
 
-# Spec
-- [Docker Desktop](https://www.docker.com/products/docker-desktop): latest
-- [NodeJS](https://nodejs.org/en/): latest
-- [google/clasp](https://github.com/google/clasp): latest
+# Requirement
+name | version
+-- | -- 
+[Docker Desktop](https://www.docker.com/products/docker-desktop) | version 1.23.2, build 1110ad01
+[NodeJS](https://nodejs.org/en/) | v11.13.0
+[google/clasp](https://github.com/google/clasp) | 2.1.0
 
-# How to use
-## build docker image
+# Usage
+
+## build docker image(only once)
 
 ```shell
 $ docker-compose build
@@ -49,10 +52,9 @@ hogehoge     – https://script.google.com/d/XXXXXX/edit
 hugahuga     – https://script.google.com/d/YYYYYY/edit
 ```
 
-Choose target project and checkout project.
+select a project and check out
 
 ```e.g. hogehoge
-root@34cd6de71f2d:/app# cd /app
 root@34cd6de71f2d:/app# clasp clone https://script.google.com/d/XXXXXX/edit
 ```
 
@@ -76,7 +78,7 @@ root@34cd6de71f2d:/app# clasp deployments
 - AKfycbytqkQOGyXWTaXYrclwu6UUSOHXO8Zdzo2Gs3PY-NQqpoFEg8QjdTdT1AIc_cY9-axv @4 
 ```
 
-rollback deployment.
+rollback deployment
 ```
 root@34cd6de71f2d:/app# clasp undeploy
 Undeployed AKfycbytqkQOGyXWTaXYrclwu6UUSOHXO8Zdzo2Gs3PY-NQqpoFEg8QjdTdT1AIc_cY9-axv.
